@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <script>document.documentElement.classList.add("js")</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MERIDIAN – Ergens is het altijd middag</title>
+  <meta name="description" content="Meridian is een eau de cologne voor wie reist: bergamot, neroli en amber. Gebotteld middaglicht. Schrijf je in en ontvang als eerste je sample.">
+  <meta name="theme-color" content="#2A1B21">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MERIDIAN – Ergens is het altijd middag">
+  <meta property="og:description" content="Gebotteld middaglicht. Eau de cologne voor wie reist. Schrijf je in en ontvang als eerste je sample.">
+  <meta property="og:image" content="https://abdullahaltaee10-star.github.io/meridian/img/og-image.jpg">
+  <meta property="og:url" content="https://abdullahaltaee10-star.github.io/meridian/">
+  <meta property="og:locale" content="nl_BE">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="img/zon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="img/hero-fles-a.webp" as="image">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="zon" viewBox="0 0 64 64">
+      <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <circle cx="32" cy="32" r="9.5"/>
+        <g id="stralen"><path d="M32 4v12M32 48v12M4 32h12M48 32h12"/></g>
+        <use href="#stralen" transform="rotate(18 32 32)"/>
+        <use href="#stralen" transform="rotate(36 32 32)"/>
+        <use href="#stralen" transform="rotate(54 32 32)"/>
+        <use href="#stralen" transform="rotate(72 32 32)"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <a class="skiplink" href="#inschrijven">Ga meteen naar inschrijven</a>
+
+  <!-- 0. Intro: 11:59 → 12:00 -->
+  <div class="intro" aria-hidden="true">
+    <div class="intro__klok"><span class="intro__uur">11</span><span class="intro__dp">:</span><span class="intro__min">59</span></div>
+    <div class="intro__flits"></div>
+  </div>
+
+  <!-- Vaste lagen -->
+  <div class="achtergrond" aria-hidden="true"></div>
+  <div class="meridiaan" aria-hidden="true"><span class="meridiaan__lijn"></span><svg class="meridiaan__zon"><use href="#zon"/></svg></div>
+  <div class="cursor" aria-hidden="true"><svg><use href="#zon"/></svg></div>
+
+  <header class="kop">
+    <a class="kop__merk" href="#top" aria-label="Meridian, naar boven">
+      <svg class="kop__zon" aria-hidden="true"><use href="#zon"/></svg>
+      <span>MERIDIAN</span>
+    </a>
+    <div class="kop__rechts">
+      <div class="klok" role="timer" aria-label="Tijd tot de middag">
+        <span class="klok__tijd">11:59</span><span class="klok__sec">:00</span>
+      </div>
+      <a class="knop knop--klein magneet" href="#inschrijven">Schrijf je in</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 1. Hero -->
+    <section class="hero" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="hero-titel">
+      <div class="hero__tekst">
+        <p class="label hero__in">Nieuw · Eau de cologne</p>
+        <h1 id="hero-titel" class="hero__titel">
+          <span class="hero__regel hero__in">Ergens is het</span>
+          <span class="hero__regel hero__regel--cursief hero__in">altijd middag.</span>
+        </h1>
+        <p class="lead hero__in">Meridian is gebotteld middaglicht voor wie reist. Bergamot bij vertrek, neroli onderweg, amber bij aankomst. Eén spray en het is twaalf uur, waar je ook landt.</p>
+        <div class="hero__knoppen hero__in">
+          <a class="knop knop--bordeaux magneet" href="#inschrijven"><svg aria-hidden="true"><use href="#zon"/></svg><span>Ontvang je sample</span></a>
+          <a class="knop knop--lijn magneet" href="#middaglicht">Ontdek de geur</a>
+        </div>
+        <dl class="hero__data hero__in">
+          <div><dt>Vertrek</dt><dd>11:59</dd></div>
+          <div><dt>Aankomst</dt><dd>12:00</dd></div>
+          <div><dt>Bestemming</dt><dd>Overal</dd></div>
+        </dl>
+      </div>
+      <div class="hero__beeld">
+        <figure class="hero__boog">
+          <img src="img/hero-fles-a.webp" alt="De Meridian-fles: amberkleurig glas met zwarte dop en het gouden woordmerk MERIDIAN met zon, in zacht middaglicht." width="819" height="1024" fetchpriority="high">
+        </figure>
+        <div class="miniticket" aria-hidden="true">
+          <div class="miniticket__info">
+            <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+            <p class="pas__route"><span>BRU</span><span class="pas__vlieg">✦</span><span>12:00</span></p>
+            <p class="miniticket__naam">Passagier: <em>de middag</em></p>
+          </div>
+          <div class="miniticket__strook"><span class="stempel stempel--klein">12:00</span></div>
+        </div>
+      </div>
+      <div class="scrollhint" aria-hidden="true"><span></span>Scroll naar de middag</div>
+    </section>
+
+    <!-- 2. Gebotteld middaglicht -->
+    <section id="middaglicht" class="middaglicht" data-bg="#F2BE5C" data-fg="#2A1B21" aria-labelledby="ml-titel">
+      <div class="middaglicht__inhoud">
+        <p class="label">Hoofdstuk I · 11:59</p>
+        <h2 id="ml-titel" class="titel splits">Gebotteld middaglicht.</h2>
+        <p class="lead splits-regels">Er is een moment waarop de zon recht boven je staat. Schaduwen worden kort, de wereld wordt even stil. Wij hebben dat moment in een fles gegoten.</p>
+        <p class="lead splits-regels">Meridian is een frisse eau de cologne voor wie onderweg is. Eén spray en het is twaalf uur, waar je ook landt.</p>
+      </div>
+      <div class="middaglicht__beelden">
+        <figure class="fotokaart fotokaart--groot">
+          <img src="img/zonnewijzer.webp" alt="Een stenen zonnewijzer waarvan de schaduw recht op twaalf uur wijst." loading="lazy" width="896" height="1152">
+          <figcaption><span>Schaduw</span><span>12:00</span></figcaption>
+        </figure>
+        <figure class="fotokaart fotokaart--klein">
+          <img src="img/amber-licht.webp" alt="Een glas amberkleurige vloeistof dat het middaglicht vangt." loading="lazy" width="896" height="1152">
+          <figcaption><span>Licht</span><span>11:59</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3. Geurnoten -->
+    <section class="noten" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="noten-titel">
+      <div class="noten__kop">
+        <p class="label">Hoofdstuk II · De geur</p>
+        <h2 id="noten-titel" class="titel">Bergamot · Neroli · <em>Amber</em></h2>
+        <p class="lead">Drie noten, één reis. Van fris bij vertrek tot warm bij aankomst.</p>
+      </div>
+      <div class="noten__rij">
+        <article class="notekaart notekaart--bergamot">
+          <div class="notekaart__beeld"><img src="img/bergamot.webp" alt="Gehalveerde bergamotten met witte neroli-bloesem op zand." loading="lazy" width="896" height="1152"></div>
+          <div class="notekaart__tekst">
+            <p class="notekaart__nr"><span>Noot 01</span><span>Vertrek</span></p>
+            <h3 class="notekaart__naam">Bergamot</h3>
+            <p>Fris, groen en een tikje bitter. Zon op een schil, vlak voor het instappen.</p>
+          </div>
+        </article>
+        <article class="notekaart notekaart--neroli">
+          <div class="notekaart__beeld"><img src="img/gordijn.webp" alt="Een wit linnen gordijn dat zacht waait voor een open raam." loading="lazy" width="896" height="1152"></div>
+          <div class="notekaart__tekst">
+            <p class="notekaart__nr"><span>Noot 02</span><span>Onderweg</span></p>
+            <h3 class="notekaart__naam">Neroli</h3>
+            <p>Licht en wit als een linnen gordijn in de wind. Een open raam boven de wolken.</p>
+          </div>
+        </article>
+        <article class="notekaart notekaart--amber">
+          <div class="notekaart__beeld"><img src="img/amberhars.webp" alt="Brokken amberhars die gloeien in het woestijnzand." loading="lazy" width="896" height="1152"></div>
+          <div class="notekaart__tekst">
+            <p class="notekaart__nr"><span>Noot 03</span><span>Aankomst</span></p>
+            <h3 class="notekaart__naam">Amber</h3>
+            <p>Warm als woestijnzand. De noot die blijft als je allang geland bent.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4. Waar je ook landt -->
+    <section class="bestemmingen" data-bg="#E6EEF0" data-fg="#2A1B21" aria-labelledby="best-titel">
+      <div class="bestemmingen__kop">
+        <p class="label">Hoofdstuk III · Aankomst 12:00</p>
+        <h2 id="best-titel" class="titel">Waar je ook landt.</h2>
+      </div>
+      <div class="baan">
+        <ol class="baan__spoor">
+          <li class="pas">
+            <img class="pas__beeld" src="img/santorini.webp" alt="Meridian op een witte trap in Santorini, met zee en een reisklokje." loading="lazy" width="928" height="1152">
+            <div class="pas__info">
+              <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+              <p class="pas__route"><span>BRU</span><span class="pas__vlieg" aria-hidden="true">✦</span><span>JTR</span></p>
+              <h3 class="pas__stad">Santorini</h3>
+              <dl class="pas__data"><div><dt>Passagier</dt><dd>De middag</dd></div><div><dt>Gate</dt><dd>M</dd></div><div><dt>Aankomst</dt><dd>12:00</dd></div></dl>
+              <p class="pas__zin">Witte trappen, korte schaduwen en de zon recht boven je hoofd.</p>
+            </div>
+            <div class="pas__perforatie" aria-hidden="true"></div>
+            <div class="pas__strook"><span class="stempel">12:00</span><span class="pas__seat">Seat 12A</span></div>
+          </li>
+          <li class="pas">
+            <img class="pas__beeld pas__beeld--athene" src="img/athene.webp" alt="Een open koffer met een boardingpass naar Athene op een marmeren trap aan zee." loading="lazy" width="928" height="1152">
+            <div class="pas__info">
+              <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+              <p class="pas__route"><span>BRU</span><span class="pas__vlieg" aria-hidden="true">✦</span><span>ATH</span></p>
+              <h3 class="pas__stad">Athene</h3>
+              <dl class="pas__data"><div><dt>Passagier</dt><dd>De middag</dd></div><div><dt>Gate</dt><dd>M</dd></div><div><dt>Aankomst</dt><dd>12:00</dd></div></dl>
+              <p class="pas__zin">Marmer dat warm is van de zon. Handbagage: één middag.</p>
+            </div>
+            <div class="pas__perforatie" aria-hidden="true"></div>
+            <div class="pas__strook"><span class="stempel">12:00</span><span class="pas__seat">Seat 12B</span></div>
+          </li>
+          <li class="pas">
+            <img class="pas__beeld" src="img/marrakech.webp" alt="Meridian in een riad in Marrakech, met zelliges en een hotelsleutel met kwast." loading="lazy" width="928" height="1152">
+            <div class="pas__info">
+              <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+              <p class="pas__route"><span>BRU</span><span class="pas__vlieg" aria-hidden="true">✦</span><span>RAK</span></p>
+              <h3 class="pas__stad">Marrakech</h3>
+              <dl class="pas__data"><div><dt>Passagier</dt><dd>De middag</dd></div><div><dt>Gate</dt><dd>M</dd></div><div><dt>Aankomst</dt><dd>12:00</dd></div></dl>
+              <p class="pas__zin">Zelliges, een koele binnenplaats en neroli in de lucht.</p>
+            </div>
+            <div class="pas__perforatie" aria-hidden="true"></div>
+            <div class="pas__strook"><span class="stempel">12:00</span><span class="pas__seat">Seat 12C</span></div>
+          </li>
+          <li class="pas">
+            <img class="pas__beeld" src="img/privejet.webp" alt="Meridian op een tafeltje in een privéjet, met door het raam de zon boven de wolken." loading="lazy" width="928" height="1152">
+            <div class="pas__info">
+              <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+              <p class="pas__route"><span>BRU</span><span class="pas__vlieg" aria-hidden="true">✦</span><span>LIS</span></p>
+              <h3 class="pas__stad">Privéjet</h3>
+              <dl class="pas__data"><div><dt>Passagier</dt><dd>De middag</dd></div><div><dt>Hoogte</dt><dd>11.000 m</dd></div><div><dt>Tijd</dt><dd>12:00</dd></div></dl>
+              <p class="pas__zin">Boven de wolken is het altijd middag.</p>
+            </div>
+            <div class="pas__perforatie" aria-hidden="true"></div>
+            <div class="pas__strook"><span class="stempel">12:00</span><span class="pas__seat">Seat 1A</span></div>
+          </li>
+          <li class="pas">
+            <img class="pas__beeld" src="img/dakterras.webp" alt="Meridian op een dakterras aan zee, naast een zonnebril en een schijf bergamot." loading="lazy" width="928" height="1152">
+            <div class="pas__info">
+              <p class="pas__kop"><span>Boarding pass</span><span>MRD 1200</span></p>
+              <p class="pas__route"><span>BRU</span><span class="pas__vlieg" aria-hidden="true">✦</span><span>12:00</span></p>
+              <h3 class="pas__stad">Dakterras</h3>
+              <dl class="pas__data"><div><dt>Passagier</dt><dd>De middag</dd></div><div><dt>Gate</dt><dd>M</dd></div><div><dt>Aankomst</dt><dd>12:00</dd></div></dl>
+              <p class="pas__zin">Zonnebril op, de zee onder je. Je bent er.</p>
+            </div>
+            <div class="pas__perforatie" aria-hidden="true"></div>
+            <div class="pas__strook"><span class="stempel">12:00</span><span class="pas__seat">Seat 12D</span></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 5. Film -->
+    <section class="film" data-bg="#2A1B21" data-fg="#FBF3E4" aria-labelledby="film-titel">
+      <div class="film__kader">
+        <video class="film__video" muted loop playsinline preload="none"
+          poster="video/poster-film-16x9.webp"
+          data-src-breed="video/meridian-film-16x9.mp4" data-src-hoog="video/meridian-film-9x16.mp4"
+          data-poster-hoog="video/poster-film-9x16.webp"
+          aria-label="Campagnefilm De middag reist mee: een boardingpass, een koffer vol licht, een zonnewijzer op de vleugel en de Meridian-fles op terrazzo."></video>
+        <div class="film__tekst">
+          <p class="label">Hoofdstuk IV · De film</p>
+          <h2 id="film-titel" class="titel">De middag reist mee.</h2>
+        </div>
+        <button class="film__geluid magneet" type="button" aria-pressed="false">
+          <span class="film__geluid-icoon" aria-hidden="true"></span><span class="film__geluid-tekst">Geluid aan</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- 6. Cadeau -->
+    <section class="cadeau" data-bg="#8A384D" data-fg="#FBF3E4" aria-labelledby="cadeau-titel">
+      <div class="cadeau__beelden">
+        <figure class="cadeau__boog">
+          <video class="cadeau__video" muted loop playsinline preload="none"
+            poster="video/poster-cadeau-9x16.webp"
+            data-src-breed="video/meridian-cadeau-9x16.mp4" data-src-hoog="video/meridian-cadeau-9x16.mp4"
+            aria-label="Cadeaufilm: de Meridian-fles in een bordeaux geschenkdoos met gouden lint."></video>
+        </figure>
+        <img class="cadeau__los" src="img/cadeau-03.webp" alt="Meridian naast een bordeaux geschenkdoos met gouden strik." loading="lazy" width="1000" height="1250">
+      </div>
+      <div class="cadeau__tekst">
+        <p class="label">Hoofdstuk V · Cadeau</p>
+        <h2 id="cadeau-titel" class="titel splits">Geef de middag cadeau.</h2>
+        <p class="lead">Voor wie altijd onderweg is: een fles vol zon, in een bordeaux doos met gouden lint. Past in elke handbagage en onder elke boom.</p>
+        <a class="knop knop--goud magneet" href="#inschrijven">Ontvang als eerste je sample</a>
+      </div>
+    </section>
+
+    <!-- 7. Inschrijving -->
+    <section id="inschrijven" class="inschrijven" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="form-titel">
+      <div class="twaalf" aria-hidden="true">
+        <div class="twaalf__zon"><div class="twaalf__gloed"></div><svg><use href="#zon"/></svg></div>
+        <span class="twaalf__lijn"></span>
+        <img class="twaalf__fles" src="img/fles-a.webp" alt="" loading="lazy" width="351" height="717">
+        <p class="twaalf__tijd">12:00</p>
+      </div>
+      <div class="inschrijven__vak">
+        <p class="label">Hoofdstuk VI · Het is middag</p>
+        <h2 id="form-titel" class="titel">Schrijf je in en ontvang als eerste je sample.</h2>
+        <p class="lead">Eén mail per moment dat ertoe doet: de lancering, de verhalen achter de geur en je gratis sample.</p>
+
+        <!-- MailerLite embedded form "Meridian – Nieuwsbrief" (account 2735695, form 202109237346698867), in brandkitstijl -->
+        <form class="formulier" action="https://assets.mailerlite.com/jsonp/2735695/forms/202109237346698867/subscribe" method="post" target="_blank" novalidate>
+          <div class="veld">
+            <label for="f-naam">Voornaam</label>
+            <input id="f-naam" type="text" name="fields[name]" autocomplete="given-name" placeholder="Lena" required>
+          </div>
+          <div class="veld">
+            <label for="f-mail">E-mailadres</label>
+            <input id="f-mail" type="email" name="fields[email]" autocomplete="email" placeholder="lena@voorbeeld.be" required>
+          </div>
+          <label class="optin">
+            <input id="f-optin" type="checkbox" required>
+            <span class="optin__vak" aria-hidden="true"></span>
+            <span>Ja, ik wil de Meridian-nieuwsbrief ontvangen en ga akkoord met de <a href="privacy.html">privacyverklaring</a>. Uitschrijven kan altijd.</span>
+          </label>
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button class="knop knop--bordeaux magneet" type="submit"><svg aria-hidden="true"><use href="#zon"/></svg><span>Schrijf je in</span></button>
+          <p class="formulier__melding" role="status" aria-live="polite"></p>
+          <p class="formulier__gdpr">We gebruiken je naam en e-mailadres alleen voor de Meridian-nieuwsbrief, via MailerLite. Je krijgt eerst een mail om je inschrijving te bevestigen. Lees onze <a href="privacy.html">privacyverklaring</a>.</p>
+        </form>
+        <div class="bedankt" hidden tabindex="-1">
+          <svg aria-hidden="true"><use href="#zon"/></svg>
+          <h3 class="titel-s">Welkom aan boord.</h3>
+          <p>Check je inbox en bevestig je inschrijving. Daarna reist de middag met je mee.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. Footer -->
+  <footer class="voet">
+    <div class="voet__merk">
+      <svg aria-hidden="true"><use href="#zon"/></svg>
+      <p class="voet__woordmerk">MERIDIAN</p>
+      <p class="voet__slogan">Ergens is het altijd middag.</p>
+    </div>
+    <nav class="voet__links" aria-label="Footer">
+      <a href="https://www.instagram.com/" rel="noopener" target="_blank">Instagram</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="#inschrijven">Nieuwsbrief</a>
+    </nav>
+    <p class="voet__klein">Fictief merk – schoolproject Arteveldehogeschool · © 2026 Meridian</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
