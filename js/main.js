@@ -61,33 +61,16 @@
     }
   });
 
-  /* ---------- Video's: pas laden als ze in de buurt komen ---------- */
-  const hoog = () => matchMedia("(max-aspect-ratio: 1/1)").matches;
-  function laadVideo(v) {
-    if (v.dataset.geladen) return;
-    v.dataset.geladen = "1";
-    if (hoog() && v.dataset.posterHoog) v.poster = v.dataset.posterHoog;
-    v.src = hoog() ? v.dataset.srcHoog : v.dataset.srcBreed;
-    v.load();
-  }
+  /* ---------- Kleine clip: alleen afspelen als hij in beeld is ---------- */
   const videoKijker = new IntersectionObserver((items) => {
     items.forEach(({ target: v, isIntersecting }) => {
-      if (isIntersecting) {
-        laadVideo(v);
-        if (!rustig) v.play().catch(() => {});
-      } else if (!v.paused) v.pause();
+      if (isIntersecting) { if (!rustig) v.play().catch(() => {}); }
+      else if (!v.paused) v.pause();
     });
-  }, { rootMargin: "200px 0px" });
-  $$("video").forEach((v) => videoKijker.observe(v));
-
-  const geluid = $(".film__geluid");
-  geluid.addEventListener("click", () => {
-    const v = $(".film__video");
-    laadVideo(v);
-    v.muted = !v.muted;
-    if (!v.muted) v.play().catch(() => {});
-    geluid.setAttribute("aria-pressed", String(!v.muted));
-    $(".film__geluid-tekst", geluid).textContent = v.muted ? "Geluid aan" : "Geluid uit";
+  }, { rootMargin: "100px 0px" });
+  $$("video").forEach((v) => {
+    if (rustig) { v.autoplay = false; v.pause(); }
+    videoKijker.observe(v);
   });
 
   /* ---------- Zonder GSAP of met minder beweging: alles statisch ---------- */
@@ -200,15 +183,8 @@
       });
     }
 
-    // Film groeit van klein naar schermvullend
-    const filmTl = gsap.timeline({
-      scrollTrigger: { trigger: ".film", start: "top top", end: desktop ? "+=90%" : "+=70%", pin: true, scrub: 0.6 },
-    });
-    filmTl
-      .fromTo(".film__kader",
-        { clipPath: desktop ? "inset(28% 30% 28% 30% round 24px)" : "inset(18% 12% 18% 12% round 20px)" },
-        { clipPath: "inset(0% 0% 0% 0% round 0px)", ease: "power2.inOut", duration: 1 })
-      .from(".film__tekst > *", { opacity: 0, y: 40, stagger: 0.1, duration: 0.4 }, 0.6);
+    // Kleine clip schuift rustig in beeld
+    gsap.from(".reis__clip", { y: 60, opacity: 0, duration: 1.1, ease: "power3.out", scrollTrigger: { trigger: ".reis", start: "top 70%" } });
 
     // Cadeau
     gsap.from(".cadeau__boog", { y: 80, opacity: 0, duration: 1.2, ease: "power3.out", scrollTrigger: { trigger: ".cadeau", start: "top 65%" } });
