@@ -70,10 +70,7 @@
     <section class="hero" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="hero-titel">
       <div class="hero__tekst">
         <p class="label hero__in">Nieuw · Eau de cologne</p>
-        <h1 id="hero-titel" class="hero__titel">
-          <span class="hero__regel hero__in">Ergens is het</span>
-          <span class="hero__regel hero__regel--cursief hero__in">altijd middag.</span>
-        </h1>
+        <h1 id="hero-titel" class="hero__titel hero__in">Ergens is het altijd middag.</h1>
         <p class="lead hero__in">Meridian is gebotteld middaglicht voor wie reist. Bergamot bij vertrek, neroli onderweg, amber bij aankomst. Eén spray en het is twaalf uur, waar je ook landt.</p>
         <div class="hero__knoppen hero__in">
           <a class="knop knop--bordeaux magneet" href="#inschrijven"><svg aria-hidden="true"><use href="#zon"/></svg><span>Ontvang je sample</span></a>
@@ -125,7 +122,7 @@
     <section class="noten" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="noten-titel">
       <div class="noten__kop">
         <p class="label">Hoofdstuk II · De geur</p>
-        <h2 id="noten-titel" class="titel">Bergamot · Neroli · <em>Amber</em></h2>
+        <h2 id="noten-titel" class="titel">Bergamot · Neroli · Amber</h2>
         <p class="lead">Drie noten, één reis. Van fris bij vertrek tot warm bij aankomst.</p>
       </div>
       <div class="noten__rij">
@@ -228,32 +225,29 @@
       </div>
     </section>
 
-    <!-- 5. Film -->
-    <section class="film" data-bg="#2A1B21" data-fg="#FBF3E4" aria-labelledby="film-titel">
-      <div class="film__kader">
-        <video class="film__video" muted loop playsinline preload="none"
-          poster="video/poster-film-16x9.webp"
-          data-src-breed="video/meridian-film-16x9.mp4" data-src-hoog="video/meridian-film-9x16.mp4"
-          data-poster-hoog="video/poster-film-9x16.webp"
-          aria-label="Campagnefilm De middag reist mee: een boardingpass, een koffer vol licht, een zonnewijzer op de vleugel en de Meridian-fles op terrazzo."></video>
-        <div class="film__tekst">
-          <p class="label">Hoofdstuk IV · De film</p>
-          <h2 id="film-titel" class="titel">De middag reist mee.</h2>
-        </div>
-        <button class="film__geluid magneet" type="button" aria-pressed="false">
-          <span class="film__geluid-icoon" aria-hidden="true"></span><span class="film__geluid-tekst">Geluid aan</span>
-        </button>
+    <!-- 5. De reis (kleine realistische clip) -->
+    <section id="reis" class="reis" data-bg="#FBF3E4" data-fg="#2A1B21" aria-labelledby="reis-titel">
+      <div class="reis__tekst">
+        <p class="label">Hoofdstuk IV · Onderweg</p>
+        <h2 id="reis-titel" class="titel">De middag reist mee.</h2>
+        <p class="lead">Een leren koffer op marmeren treden, een ticket voor twaalf uur en de zee die zachtjes glinstert. Meridian is gemaakt voor dat moment tussen vertrek en aankomst, wanneer de zon recht boven je staat.</p>
+        <p class="lead">Neem de fles mee in je handbagage. Waar je ook uitstapt, het is meteen middag.</p>
       </div>
+      <figure class="reis__clip">
+        <video class="reis__video" autoplay muted loop playsinline preload="metadata"
+          poster="video/poster-koffer.jpg" width="360" height="640"
+          aria-label="Korte clip: een open leren koffer met een ticket voor 12:00 op marmeren trappen aan zee, met de Meridian-fles op de trede erboven.">
+          <source src="video/meridian-koffer.mp4" type="video/mp4">
+        </video>
+        <figcaption><span>Athene</span><span>12:00</span></figcaption>
+      </figure>
     </section>
 
     <!-- 6. Cadeau -->
     <section class="cadeau" data-bg="#8A384D" data-fg="#FBF3E4" aria-labelledby="cadeau-titel">
       <div class="cadeau__beelden">
         <figure class="cadeau__boog">
-          <video class="cadeau__video" muted loop playsinline preload="none"
-            poster="video/poster-cadeau-9x16.webp"
-            data-src-breed="video/meridian-cadeau-9x16.mp4" data-src-hoog="video/meridian-cadeau-9x16.mp4"
-            aria-label="Cadeaufilm: de Meridian-fles in een bordeaux geschenkdoos met gouden lint."></video>
+          <img class="cadeau__video" src="img/cadeau-01.webp" alt="De Meridian-fles met een bordeaux geschenkdoos en gouden lint." loading="lazy" width="1000" height="1250">
         </figure>
         <img class="cadeau__los" src="img/cadeau-03.webp" alt="Meridian naast een bordeaux geschenkdoos met gouden strik." loading="lazy" width="1000" height="1250">
       </div>
