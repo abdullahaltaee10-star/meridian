@@ -59,7 +59,7 @@ p { margin: 0; }
   font-family: var(--serif); font-size: clamp(40px, 6.4vw, 96px);
   line-height: 1.05; letter-spacing: -.01em;
 }
-.titel-s { font-family: var(--serif); font-size: 32px; font-style: italic; }
+.titel-s { font-family: var(--serif); font-size: 32px; font-weight: 400; }
 .lead { font-size: clamp(17px, 1.35vw, 20px); line-height: 1.65; max-width: 34em; margin-top: 24px; }
 .splits .woord, .splits-regels .woord { display: inline-block; }
 
@@ -105,7 +105,6 @@ p { margin: 0; }
 .js .intro { display: grid; }
 .intro__klok { opacity: 0; }
 .is-geladen .intro, .rustig .intro { display: none; }
-.rustig .film__kader { clip-path: none; }
 
 /* ---------- Vaste lagen ---------- */
 .achtergrond { position: fixed; inset: 0; z-index: -2; background: var(--creme); }
@@ -159,9 +158,8 @@ main { position: relative; z-index: 2; }
   display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 5vw;
   padding: 130px var(--rand) 90px calc(var(--rand) * 1.4);
 }
-.hero__titel { font-family: var(--serif); font-size: clamp(48px, 5.8vw, 104px); line-height: 1; letter-spacing: -.015em; }
+.hero__titel { font-family: var(--serif); font-weight: 400; color: var(--pruim); font-size: clamp(48px, 5.6vw, 96px); line-height: 1.05; letter-spacing: -.015em; max-width: 9.5em; text-wrap: balance; }
 .hero__regel { display: block; white-space: nowrap; }
-.hero__regel--cursief { font-style: italic; color: var(--bordeaux); padding-left: .55em; }
 .hero .lead { max-width: 30em; }
 .hero__knoppen { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
 .knop--lijn { --k-bg: transparent; --k-fg: var(--pruim); box-shadow: inset 0 0 0 1px var(--pruim); }
@@ -234,7 +232,7 @@ main { position: relative; z-index: 2; }
 .notekaart__beeld img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
 .notekaart__tekst { padding: 24px 26px 30px; border-top: 2px dashed color-mix(in srgb, var(--t) 25%, transparent); }
 .notekaart__nr { display: flex; justify-content: space-between; font-size: 10px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase; opacity: .7; }
-.notekaart__naam { font-family: var(--serif); font-style: italic; font-size: clamp(40px, 3.6vw, 60px); line-height: 1.05; margin: 14px 0 10px; }
+.notekaart__naam { font-family: var(--serif); font-size: clamp(40px, 3.6vw, 60px); line-height: 1.05; margin: 14px 0 10px; }
 .notekaart p:last-child { font-size: 16px; line-height: 1.55; }
 
 /* ---------- 4. Bestemmingen ---------- */
@@ -256,7 +254,7 @@ main { position: relative; z-index: 2; }
 .pas__kop { display: flex; justify-content: space-between; font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--bordeaux); font-weight: 600; }
 .pas__route { display: flex; align-items: center; gap: 14px; margin-top: 22px; font-family: var(--serif); font-size: 30px; letter-spacing: .06em; }
 .pas__vlieg { flex: 1; height: 1px; background: linear-gradient(90deg, var(--goud) 50%, transparent 0) 0 0 / 8px 1px; position: relative; color: var(--goud); font-size: 14px; text-align: center; line-height: 0; }
-.pas__stad { font-family: var(--serif); font-style: italic; font-size: 40px; margin-top: 18px; }
+.pas__stad { font-family: var(--serif); font-size: 40px; margin-top: 18px; }
 .pas__data { display: grid; grid-template-columns: repeat(3, auto); gap: 8px 18px; margin: 18px 0 0; }
 .pas__data dt { font-size: 9px; letter-spacing: .24em; text-transform: uppercase; opacity: .6; }
 .pas__data dd { margin: 2px 0 0; font-weight: 600; font-size: 15px; }
@@ -277,27 +275,21 @@ main { position: relative; z-index: 2; }
   transform: rotate(-14deg); opacity: .9; mix-blend-mode: multiply;
 }
 
-/* ---------- 5. Film ---------- */
-.film { height: 100vh; position: relative; }
-.film__kader {
-  position: absolute; inset: 0; overflow: hidden; display: grid; place-items: center;
-  clip-path: inset(28% 30% 28% 30% round 24px);
+/* ---------- 5. De reis (kleine clip) ---------- */
+.reis {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6vw;
+  padding: 16vh var(--rand) 16vh calc(var(--rand) * 1.4); max-width: 1280px; margin: 0 auto;
 }
-.film__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.film__kader::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(42,27,33,.35), transparent 30%, transparent 65%, rgba(42,27,33,.6)); pointer-events: none; }
-.film__tekst { position: absolute; left: var(--rand); bottom: 9vh; z-index: 2; color: var(--creme); }
-.film__geluid {
-  position: absolute; right: var(--rand); bottom: 9vh; z-index: 2;
-  display: inline-flex; align-items: center; gap: 12px; padding: 14px 22px; border-radius: 999px;
-  border: 1px solid rgba(251,243,228,.6); background: rgba(42,27,33,.35); color: var(--creme);
-  font: 600 11px/1 var(--sans); letter-spacing: .22em; text-transform: uppercase; cursor: pointer;
-  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+.reis__clip { margin: 0; width: min(360px, 32vw); }
+.reis__video {
+  width: 100%; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 22px;
+  background: #e9dcc6; box-shadow: 0 30px 60px -30px rgba(42,27,33,.45);
 }
-.film__geluid-icoon { width: 18px; height: 12px; display: flex; gap: 3px; align-items: flex-end; }
-.film__geluid-icoon::before, .film__geluid-icoon::after { content: ""; flex: 1; background: var(--goud); height: 30%; }
-.film__geluid[aria-pressed="true"] .film__geluid-icoon::before { animation: eq .9s ease-in-out infinite alternate; }
-.film__geluid[aria-pressed="true"] .film__geluid-icoon::after { animation: eq .7s ease-in-out infinite alternate-reverse; }
-@keyframes eq { from { height: 20%; } to { height: 100%; } }
+.reis__clip figcaption {
+  display: flex; justify-content: space-between; margin-top: 12px;
+  font-size: 10px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase;
+}
+.reis__clip figcaption span:last-child { font-family: var(--serif); font-size: 18px; letter-spacing: .04em; font-weight: 400; color: var(--bordeaux); }
 
 /* ---------- 6. Cadeau ---------- */
 .cadeau {
@@ -359,7 +351,7 @@ main { position: relative; z-index: 2; }
 }
 .voet__merk svg { width: 56px; height: 56px; color: var(--goud); margin: 0 auto 18px; }
 .voet__woordmerk { font-family: var(--serif); font-size: clamp(40px, 7vw, 88px); letter-spacing: .18em; line-height: 1; }
-.voet__slogan { font-family: var(--serif); font-style: italic; font-size: 22px; margin-top: 14px; color: var(--goud); }
+.voet__slogan { font-family: var(--serif); font-size: 22px; margin-top: 14px; color: var(--goud); }
 .voet__links { display: flex; gap: 32px; flex-wrap: wrap; justify-content: center; }
 .voet__links a { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; text-decoration: none; padding: 6px 0; border-bottom: 1px solid rgba(242,190,92,.5); }
 .voet__links a:hover { color: var(--goud); }
@@ -369,7 +361,6 @@ main { position: relative; z-index: 2; }
 @media (max-width: 820px) {
   .hero { grid-template-columns: 1fr; padding: 110px var(--rand) 70px; gap: 56px; min-height: auto; }
   .hero__titel { font-size: 15vw; }
-  .hero__regel--cursief { padding-left: .3em; }
   .hero__data { gap: 24px; }
   .hero__data dd { font-size: 22px; }
   .hero__beeld { height: auto; width: 86%; }
@@ -399,9 +390,8 @@ main { position: relative; z-index: 2; }
   .pas__strook { width: auto; flex-direction: row; padding: 16px 22px; }
   .pas__seat { writing-mode: horizontal-tb; transform: none; }
   .stempel { width: 78px; height: 78px; font-size: 20px; }
-  .film__kader { clip-path: inset(18% 12% 18% 12% round 20px); }
-  .film__tekst { bottom: 16vh; }
-  .film__geluid { left: var(--rand); right: auto; bottom: 7vh; }
+  .reis { grid-template-columns: 1fr; padding: 12vh var(--rand); gap: 40px; }
+  .reis__clip { width: 100%; }
   .cadeau, .inschrijven { grid-template-columns: 1fr; padding: 14vh var(--rand); gap: 48px; }
   .cadeau__beelden { height: 64vh; }
   .cadeau__los { width: 48%; bottom: -4vh; }
@@ -414,7 +404,6 @@ main { position: relative; z-index: 2; }
 @media (prefers-reduced-motion: reduce) {
   .cursor svg, .twaalf__zon svg, .scrollhint span { animation: none; }
   .intro { display: none; }
-  .film__kader { clip-path: none; }
 }
 
 /* Headerknop: omlijnd, volgt de hoofdstukkleur */
